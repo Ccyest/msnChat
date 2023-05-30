@@ -1,15 +1,27 @@
-import React, {Component} from "react";
-import {render} from "react-dom";
+import React, { Component } from "react";
+import HomePage from "./Homepage";
+import ProfilePage from "./ProfilePage";
+import SignUpPage from "./SignUpPage";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-export default class APP extends Component{
+
+
+export default class App extends Component{
     constructor(props){
         super(props);
     }
-
     render(){
-        return <h1>Testing React Code</h1>;
-    }
-}
+  return (
 
-const appDiv = document.getElementById("app");
-render(<APP />,appDiv);
+    <Router>
+    <Routes>
+          <Route path='/signup' element={<SignUpPage />}/>
+          <Route path='profile' element={<ProfilePage />}/>
+          <Route path='/' element={<HomePage />}/>
+    </Routes>
+</Router>
+
+ 
+  );
+}
+}
