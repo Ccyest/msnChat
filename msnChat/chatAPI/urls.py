@@ -1,6 +1,7 @@
 
 from django.urls import path, include
-from .views import UserView
+from .views import AddUserView,ListUserView
 urlpatterns = [
-    path('',UserView.as_view())
+    path('add',AddUserView.as_view()),
+    path('list',ListUserView.as_view())
 ]
