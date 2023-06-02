@@ -10,7 +10,7 @@ SEX_CHOICES = (
 
 class User (models.Model):
     email = models.EmailField(unique=True)
-    avatar = models.ImageField(upload_to="msn/image/avatar/",blank=True)
+    avatar = models.ImageField(upload_to="msnChat/frontend/static/images",blank=True)
     gender = models.CharField(max_length=20, choices = SEX_CHOICES, blank=True)
     bio = models.TextField(max_length=3000, blank=True)
 

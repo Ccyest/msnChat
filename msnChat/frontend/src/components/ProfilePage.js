@@ -1,11 +1,5 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 
-export default class ProfilePage extends Component{
-    constructor(props) {
-        super(props)
-        
-    }
-    render(){
-        return <p>This is Profile Pageaoush</p>;
-    }
+export default function ProfilePage() {
+  return <p>Hello from ProfilePage</p>;
 }
